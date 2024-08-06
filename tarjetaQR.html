@@ -71,9 +71,10 @@
    const persona = {
     if(urlParams.has('image')){
     //Accedemos a los valores
-    var image = urlParams.get('image');
+    var image = urlParams.get('image'),
     var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre'),
     var asign = urlParams.get('asign')
+   };
    };
    document.getElementById("imgPerfil").innerHTML = persona.image;
    document.getElementById("fullName").innerHTML = persona.fullName;

@@ -41,5 +41,51 @@
     </div>
   </div>
 </div>
+<script>
+   //const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwTtVJf9aFfjyiFGnzYJNv1bsq-Prg3lZR5ifFyhgf4C8UN7vCDyPlo6KqIx0QM0GQ9uQ/exec";
+    
+   var url = document.location.href;
+   console.log(url);
+   //var k = url.substr(url.lastIndexOf("k=")+2);
+ 
+   const valores = window.location.search;
+
+   //Mostramos los valores en consola:
+   console.log(valores);
+
+   //Resultado:
+   //producto=camiseta&color=azul&talla=s
+   
+   //Creamos la instancia
+   const urlParams = new URLSearchParams(valores);
+
+   //Accedemos a los valores
+   var img = urlParams.get('img');
+   //Verificar si existe el parámetro
+   console.log(urlParams.has('img'));
+
+   //Puedes recorrer los valores, claves y pares completos.
+   const
+   keys = urlParams.keys(),
+   values = urlParams.values(),
+   entries = urlParams.entries();
+
+   for (const value of values) console.log(value);
+   //camiseta, azul, s
+    
+    /*if(k){
+      fetch(AS_URL_BASE+'?k='+k)
+      .then(r => r.text())
+      .then((r) => {
+        console.log(r);
+        //document.write(r);
+        if(r){
+          document.location.replace(r);
+        }
+      })
+      .catch(err => console.log(err))
+    }*/
+
+  </script>
 </body>
 </html>

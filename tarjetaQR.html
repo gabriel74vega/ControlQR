@@ -38,6 +38,7 @@
       <h4><b>Contabilidad</b></h4>
       <p><b id="fullName"></b></p>
       <p id="asign"></p>
+      <p id="turno"><b>Turno:</b></p>
     </div>
     <div class="w3-container w3-green w3-cell">
     	<div class="w3-panel marginOk w3-border" style="border-radius:50%">
@@ -75,11 +76,13 @@
     var image = urlParams.get('image');
     var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
     var asign = urlParams.get('asign');
+    var turno = urlParams.get('turno');
      }
    var pathImage = "./" + image + ".jpg";
    document.getElementById("imgPerfil").src = pathImage;
    document.getElementById("fullName").innerHTML = fullName;
-   document.getElementById("asign").innerHTML = asign;
+   document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
+   document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
  }
  
    //Puedes recorrer los valores, claves y pares completos.

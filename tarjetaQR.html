@@ -52,7 +52,7 @@
    //var url = document.location.href;
    //console.log("url: "+url);
    //var k = url.substr(url.lastIndexOf("k=")+2);
- 
+ function cargaPersona(){
    const valores = window.location.search;
 
    //Mostramos los valores en consola:
@@ -80,6 +80,8 @@
    document.getElementById("imgPerfil").src = persona.image + ".jpg";
    document.getElementById("fullName").innerHTML = persona.fullName;
    document.getElementById("asign").innerHTML = persona.asign;
+ }
+ body.addEventListener("load", cargaPersona());
 
    //Puedes recorrer los valores, claves y pares completos.
    /*const

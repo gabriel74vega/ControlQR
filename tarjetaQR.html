@@ -69,17 +69,17 @@
    //Verificar si existe el parámetro
    //console.log("image: "+urlParams.has('image'));
    var boolImage = urlParams.has('image');
-   const persona = {
+   //const persona = {
     if(boolImage){
     //Accedemos a los valores
-    image = urlParams.get('image'),
-    fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre'),
-    asign = urlParams.get('asign')
-     }
-   };
-   document.getElementById("imgPerfil").src = "./" + persona.image + ".jpg";
-   document.getElementById("fullName").innerHTML = persona.fullName;
-   document.getElementById("asign").innerHTML = persona.asign;
+    var image = urlParams.get('image'),
+    var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre'),
+    var asign = urlParams.get('asign')
+     };
+   var pathImage = "./" + image + ".jpg";
+   document.getElementById("imgPerfil").src = pathImage;
+   document.getElementById("fullName").innerHTML = fullName;
+   document.getElementById("asign").innerHTML = asign;
  }
  
    //Puedes recorrer los valores, claves y pares completos.

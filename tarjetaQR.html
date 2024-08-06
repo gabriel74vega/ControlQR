@@ -79,7 +79,7 @@
      //Accedemos a los valores
      var image = urlParams.get('image');
    }else{
-     var image = "./avatar.jpg";
+     var image = "./imgAvatar.png";
    }
      var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
      var asign = urlParams.get('asign');
@@ -90,7 +90,7 @@
      document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
      document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
   }else{
-    document.getElementById("imgPerfil").src = "./avatar.jpg";
+    document.getElementById("imgPerfil").src = "./imgAvatar.png";
     document.getElementById("fullName").innerHTML = ¡Persona no registrada!;
     document.getElementById("asign").innerHTML = "";
     document.getElementById("turno").innerHTML = "";

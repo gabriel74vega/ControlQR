@@ -11,13 +11,13 @@
    //const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwTtVJf9aFfjyiFGnzYJNv1bsq-Prg3lZR5ifFyhgf4C8UN7vCDyPlo6KqIx0QM0GQ9uQ/exec";
     
    var url = document.location.href;
-   console.log(url);
+   console.log("url: "+url);
    //var k = url.substr(url.lastIndexOf("k=")+2);
  
    const valores = window.location.search;
 
    //Mostramos los valores en consola:
-   console.log(valores);
+   console.log("valores: "+valores);
 
    //Resultado:
    //producto=camiseta&color=azul&talla=s
@@ -28,7 +28,7 @@
    //Accedemos a los valores
    var img = urlParams.get('img');
    //Verificar si existe el parámetro
-   console.log(urlParams.has('img'));
+   console.log("img: "+urlParams.has('img'));
 
    //Puedes recorrer los valores, claves y pares completos.
    const

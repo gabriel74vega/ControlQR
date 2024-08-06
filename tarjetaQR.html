@@ -67,9 +67,9 @@
    //var image = urlParams.get('image');
    //Verificar si existe el parámetro
    //console.log("image: "+urlParams.has('image'));
-  
+   var boolImage = urlParams.has('image');
    const persona = {
-    if(urlParams.has('image')){
+    if(boolImage){
     //Accedemos a los valores
     var image = urlParams.get('image'),
     var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre'),

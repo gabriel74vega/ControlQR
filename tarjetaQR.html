@@ -7,52 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
- <script>
-   //const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwTtVJf9aFfjyiFGnzYJNv1bsq-Prg3lZR5ifFyhgf4C8UN7vCDyPlo6KqIx0QM0GQ9uQ/exec";
-    
-   var url = document.location.href;
-   console.log("url: "+url);
-   //var k = url.substr(url.lastIndexOf("k=")+2);
  
-   const valores = window.location.search;
-
-   //Mostramos los valores en consola:
-   console.log("valores: "+valores);
-
-   //Resultado:
-   //producto=camiseta&color=azul&talla=s
-   
-   //Creamos la instancia
-   const urlParams = new URLSearchParams(valores);
-
-   //Accedemos a los valores
-   var image = urlParams.get('image');
-   //Verificar si existe el parámetro
-   console.log("image: "+urlParams.has('image'));
-
-   //Puedes recorrer los valores, claves y pares completos.
-   const
-   keys = urlParams.keys(),
-   values = urlParams.values(),
-   entries = urlParams.entries();
-
-   for (const value of values) console.log(value);
-   //camiseta, azul, s
-    
-    /*if(k){
-      fetch(AS_URL_BASE+'?k='+k)
-      .then(r => r.text())
-      .then((r) => {
-        console.log(r);
-        //document.write(r);
-        if(r){
-          document.location.replace(r);
-        }
-      })
-      .catch(err => console.log(err))
-    }*/
-
-  </script>
 <style>
  .marginOk{
  	  min-height:95px!important;
@@ -76,12 +31,12 @@
 <div class="w3-card-4 test w3-display-middle" style="width:92%;max-width:300px;">
   <!--<iframe src="https://drive.google.com/embeddedfolderview?id=1j-_PjpkJJwy6rTjJg7XPQklaQK-NLCzI#grid" width="300" height="500" frameborder="0"></iframe>-->
   <!--<img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBOAhUidlQBA62joqD2BZ1aHTZ7bmJhD8xy3U90am1KKO1k7YefpfoVqWv7pZWxef2P0A2w9-pDiG0xrn1H08WyKe15FUjg9Ib_EFu0xlMNdPIg=s300" alt="Foto de perfil"> -->
- <img src="imgGabrielVega.jpg" alt="Foto de perfil">
+ <img id="imgPerfil" src="" alt="Foto de perfil">
   <div class="w3-container">
     <div class="w3-container w3-cell">
       <h4><b>Contabilidad</b></h4>
-      <p><b>Vega, Gabriel</b></p>
-      <p>Superintendente</p>
+      <p><b id="fullName"></b></p>
+      <p id="asign"></p>
     </div>
     <div class="w3-container w3-green w3-cell">
     	<div class="w3-panel marginOk w3-border" style="border-radius:50%">
@@ -90,6 +45,49 @@
     </div>
   </div>
 </div>
+<script>
+   //const AS_URL_BASE = "https://script.google.com/macros/s/AKfycbwTtVJf9aFfjyiFGnzYJNv1bsq-Prg3lZR5ifFyhgf4C8UN7vCDyPlo6KqIx0QM0GQ9uQ/exec";
+    
+   //var url = document.location.href;
+   //console.log("url: "+url);
+   //var k = url.substr(url.lastIndexOf("k=")+2);
+ 
+   const valores = window.location.search;
+
+   //Mostramos los valores en consola:
+   //console.log("valores: "+valores);
+
+   //Resultado:
+   //producto=camiseta&color=azul&talla=s
+   
+   //Creamos la instancia
+   const urlParams = new URLSearchParams(valores);
+
+   //Accedemos a los valores
+   //var image = urlParams.get('image');
+   //Verificar si existe el parámetro
+   //console.log("image: "+urlParams.has('image'));
+  
+   const persona = {
+    if(urlParams.has('image')){
+    //Accedemos a los valores
+    var image = urlParams.get('image');
+    var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre'),
+    var asign = urlParams.get('asign')
+   };
+   document.getElementById("imgPerfil").innerHTML = persona.image;
+   document.getElementById("fullName").innerHTML = persona.fullName;
+   document.getElementById("asign").innerHTML = persona.asign;
+
+   //Puedes recorrer los valores, claves y pares completos.
+   /*const
+   keys = urlParams.keys(),
+   values = urlParams.values(),
+   entries = urlParams.entries();
+
+   for (const value of values) console.log(value);*/
+  
+  </script>
 
 </body>
 </html>

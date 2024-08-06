@@ -43,7 +43,7 @@
       <p id="turno"><b>Turno:</b></p>
     </div>
     <div id="color" class="w3-container w3-green w3-cell" style="max-width:100px;">
-    	<div class="w3-panel marginOk w3-border" style="border-radius:50%">
+    	<div class="w3-panel marginOk w3-border w3-round-large">
     	<i id="check" class="material-icons" style="font-size:83px;line-height: 1.4!important">check_circle</i>
   </div>
     </div>
@@ -91,11 +91,11 @@
      document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
   }else{
     document.getElementById("imgPerfil").src = "./imgAvatar.png";
-    document.getElementById("fullName").innerHTML = "¡Persona no registrada!";
+    document.getElementById("fullName").innerHTML = "<i>¡Persona no registrada!</i>";
     document.getElementById("asign").innerHTML = "";
     document.getElementById("turno").innerHTML = "";
     document.getElementById("check").innerHTML = "cancel";
-    document.getElementById("color").setAttribute("class", "w3-red");
+    document.getElementById("color").setAttribute("class", "w3-container w3-cell w3-red");
   }
  }
  

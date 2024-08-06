@@ -23,7 +23,7 @@
   }
 </style>
 </head>
-<body>
+<body onload="cargaPersona()">
 
 <header class="w3-container w3-blue">
   <h3>Asamblea Regional 2024</h3>
@@ -81,8 +81,7 @@
    document.getElementById("fullName").innerHTML = persona.fullName;
    document.getElementById("asign").innerHTML = persona.asign;
  }
- body.addEventListener("load", cargaPersona());
-
+ 
    //Puedes recorrer los valores, claves y pares completos.
    /*const
    keys = urlParams.keys(),

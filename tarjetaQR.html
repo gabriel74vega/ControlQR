@@ -72,10 +72,10 @@
    //const persona = {
     if(boolImage){
     //Accedemos a los valores
-    var image = urlParams.get('image'),
-    var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre'),
-    var asign = urlParams.get('asign')
-     };
+    var image = urlParams.get('image');
+    var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
+    var asign = urlParams.get('asign');
+     }
    var pathImage = "./" + image + ".jpg";
    document.getElementById("imgPerfil").src = pathImage;
    document.getElementById("fullName").innerHTML = fullName;

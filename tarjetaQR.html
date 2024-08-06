@@ -12,9 +12,11 @@
 <style>
  .marginOk{
  	  min-height:95px!important;
+    width:93px!important;
     
     //margin-top: 32px;
-    margin-right:1px;
+    margin:1.5rem 1px 1px 1px!important;
+    padding:0.25rem;
     }
   img{
     width:300px;
@@ -33,16 +35,16 @@
   <!--<iframe src="https://drive.google.com/embeddedfolderview?id=1j-_PjpkJJwy6rTjJg7XPQklaQK-NLCzI#grid" width="300" height="500" frameborder="0"></iframe>-->
   <!--<img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBOAhUidlQBA62joqD2BZ1aHTZ7bmJhD8xy3U90am1KKO1k7YefpfoVqWv7pZWxef2P0A2w9-pDiG0xrn1H08WyKe15FUjg9Ib_EFu0xlMNdPIg=s300" alt="Foto de perfil"> -->
  <img id="imgPerfil" src="" alt="Foto de perfil">
-  <div class="w3-container">
-    <div class="w3-container w3-cell">
+  <div class="w3-container" style="max-width:300px;">
+    <div class="w3-container w3-cell" style="max-width:200px;">
       <h4><b>Contabilidad</b></h4>
       <p><b id="fullName"></b></p>
       <p id="asign"></p>
       <p id="turno"><b>Turno:</b></p>
     </div>
-    <div class="w3-container w3-green w3-cell">
+    <div id="color" class="w3-container w3-green w3-cell" style="max-width:100px;">
     	<div class="w3-panel marginOk w3-border" style="border-radius:50%">
-    	<i class="material-icons" style="font-size:60px;line-height: 1.4!important">check</i>
+    	<i id="check" class="material-icons" style="font-size:83px;line-height: 1.4!important">check_circle</i>
   </div>
     </div>
   </div>
@@ -70,19 +72,31 @@
    //Verificar si existe el parámetro
    //console.log("image: "+urlParams.has('image'));
    var boolImage = urlParams.has('image');
+   var id = urlParams.has('k');
    //const persona = {
-    if(boolImage){
-    //Accedemos a los valores
-    var image = urlParams.get('image');
-    var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
-    var asign = urlParams.get('asign');
-    var turno = urlParams.get('turno');
-     }
-   var pathImage = "./" + image + ".jpg";
-   document.getElementById("imgPerfil").src = pathImage;
-   document.getElementById("fullName").innerHTML = fullName;
-   document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
-   document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
+  if(id){  
+   if(boolImage){
+     //Accedemos a los valores
+     var image = urlParams.get('image');
+   }else{
+     var image = "./avatar.jpg";
+   }
+     var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
+     var asign = urlParams.get('asign');
+     var turno = urlParams.get('turno');
+     var pathImage = "./" + image + ".jpg";
+     document.getElementById("imgPerfil").src = pathImage;
+     document.getElementById("fullName").innerHTML = fullName;
+     document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
+     document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
+  }else{
+    document.getElementById("imgPerfil").src = "./avatar.jpg";
+    document.getElementById("fullName").innerHTML = ¡Persona no registrada!;
+    document.getElementById("asign").innerHTML = "";
+    document.getElementById("turno").innerHTML = "";
+    document.getElementById("check").innerHTML = "cancel";
+    document.getElementById("color").setAttribute("class", "w3-red");
+  }
  }
  
    //Puedes recorrer los valores, claves y pares completos.

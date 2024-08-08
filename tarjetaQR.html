@@ -6,15 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
- 
 <style>
- .marginOk{
+  .marginOk{
  	  min-height:95px!important;
     width:93px!important;
     
-    //margin-top: 32px;
+    /*margin-top: 32px;*/
     margin:1.5rem 0.25rem 1.5rem 0.25rem!important;
     padding:0.25rem;
     }
@@ -32,9 +29,7 @@
 </header>
 
 <div class="w3-card-4 test w3-display-middle" style="width:300px;">
-  <!--<iframe src="https://drive.google.com/embeddedfolderview?id=1j-_PjpkJJwy6rTjJg7XPQklaQK-NLCzI#grid" width="300" height="500" frameborder="0"></iframe>-->
-  <!--<img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBOAhUidlQBA62joqD2BZ1aHTZ7bmJhD8xy3U90am1KKO1k7YefpfoVqWv7pZWxef2P0A2w9-pDiG0xrn1H08WyKe15FUjg9Ib_EFu0xlMNdPIg=s300" alt="Foto de perfil"> -->
- <img id="imgPerfil" src="" alt="Foto de perfil">
+  <img id="imgPerfil" src="" alt="Foto de perfil">
   <div class="w3-container" style="width:300px;">
     <div class="w3-container w3-cell" style="width:200px;padding: 0 1.75rem 0 0;">
       <h4><b>Contabilidad</b></h4>
@@ -55,61 +50,61 @@
    //var url = document.location.href;
    //console.log("url: "+url);
    //var k = url.substr(url.lastIndexOf("k=")+2);
- function cargaPersona(){
-   const valores = window.location.search;
+  function cargaPersona(){
+    const valores = window.location.search;
 
-   //Mostramos los valores en consola:
-   //console.log("valores: "+valores);
+    //Mostramos los valores en consola:
+    //console.log("valores: "+valores);
 
-   //Resultado:
-   //producto=camiseta&color=azul&talla=s
-   
-   //Creamos la instancia
-   const urlParams = new URLSearchParams(valores);
+    //Resultado:
+    //producto=camiseta&color=azul&talla=s
+    
+    //Creamos la instancia
+    const urlParams = new URLSearchParams(valores);
 
-   //Accedemos a los valores
-   //var image = urlParams.get('image');
-   //Verificar si existe el parámetro
-   //console.log("image: "+urlParams.has('image'));
-   var boolImage = urlParams.has('image');
-   var boolId = urlParams.has('k');
-   var id = urlParams.get('k');
-   //const persona = {
-  if(boolId && (id!="" && id!=0)){  
-   if(boolImage){
-     //Accedemos a los valores
-     var image = urlParams.get('image');
-   }else{
-     var image = "./imgAvatar.png";
-   }
-     var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
-     var asign = urlParams.get('asign');
-     var turno = urlParams.get('turno');
-     var pathImage = "./" + image + ".jpg";
-     document.getElementById("imgPerfil").src = pathImage;
-     document.getElementById("fullName").innerHTML = fullName;
-     document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
-     document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
-  }else{
-    document.getElementById("imgPerfil").src = "./imgAvatar.png";
-    document.getElementById("fullName").innerHTML = "<i>¡Persona no registrada!</i>";
-    document.getElementById("fullName").setAttribute("class","w3-text-red");
-    document.getElementById("fullName").setAttribute("style","margin: 0 2.2rem 0 0;");
-    document.getElementById("asign").innerHTML = "";
-    document.getElementById("turno").innerHTML = "";
-    document.getElementById("check").innerHTML = "cancel";
-    document.getElementById("color").setAttribute("class", "w3-container w3-cell w3-red");
+    //Accedemos a los valores
+    //var image = urlParams.get('image');
+    //Verificar si existe el parámetro
+    //console.log("image: "+urlParams.has('image'));
+    var boolImage = urlParams.has('image');
+    var boolId = urlParams.has('k');
+    var id = urlParams.get('k');
+    //const persona = {
+    if(boolId && (id!="" && id!=0)){  
+      if(boolImage){
+        //Accedemos a los valores
+        var image = urlParams.get('image');
+      }else{
+        var image = "./images/imgAvatar.png";
+      }
+      var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
+      var asign = urlParams.get('asign');
+      var turno = urlParams.get('turno');
+      var pathImage = "./images/" + image + ".jpg";
+      document.getElementById("imgPerfil").src = pathImage;
+      document.getElementById("fullName").innerHTML = fullName;
+      document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
+      document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
+    }else{
+      document.getElementById("imgPerfil").src = "./images/imgAvatar.png";
+      document.getElementById("fullName").innerHTML = "<i>¡Persona no registrada!</i>";
+      document.getElementById("fullName").setAttribute("class","w3-text-red");
+      document.getElementById("fullName").setAttribute("style","margin: 0 2.2rem 0 0;");
+      document.getElementById("asign").innerHTML = "";
+      document.getElementById("turno").innerHTML = "";
+      document.getElementById("check").innerHTML = "cancel";
+      document.getElementById("color").setAttribute("class", "w3-container w3-cell w3-red");
+    }
   }
- }
  
-   //Puedes recorrer los valores, claves y pares completos.
-   /*const
-   keys = urlParams.keys(),
-   values = urlParams.values(),
-   entries = urlParams.entries();
+  //Puedes recorrer los valores, claves y pares completos.
+  /*const
+  keys = urlParams.keys(),
+  values = urlParams.values(),
+  entries = urlParams.entries();
 
-   for (const value of values) console.log(value);*/
+  for (const value of values) console.log(value);*/
   
-  </script>
+</script>
 </body>
 </html>

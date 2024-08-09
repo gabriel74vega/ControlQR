@@ -86,7 +86,7 @@
         //Accedemos a los valores
         var image = urlParams.get('image');
       }else{
-        var image = "./images/imgAvatar.png";
+        var image = "imgAvatar";
       }
       var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
       var asign = urlParams.get('asign');
@@ -99,7 +99,7 @@
       document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
     }else{
       /* document.getElementById("imgPerfil").src = "./images/imgAvatar.png";*/arguments
-      document.getElementById("divCont").setAttribute("style","background-image: url(./imgage/imgAvatar.png);");
+      document.getElementById("divCont").setAttribute("style","background-image: url(./image/imgAvatar.png);");
       document.getElementById("fullName").innerHTML = "<i>¡Persona no registrada!</i>";
       document.getElementById("fullName").setAttribute("class","w3-text-red");
       document.getElementById("fullName").setAttribute("style","margin: 0 2.2rem 0 0;");

@@ -82,13 +82,14 @@
     var id = urlParams.get('k');
     //const persona = {
     if(boolId && (id!="" && id!=0)){  
-      if(boolImage){
-        //Accedemos a los valores
+      if(boolImage ){
         var image = urlParams.get('image');
-      }else{
-        var image = "imgAvatar";
+        if(image!=""){
+          var image = urlParams.get('image');
+        }else{
+          var image = "imgAvatar";
+        }
       }
-      console.log(image);
       var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
       var asign = urlParams.get('asign');
       var turno = urlParams.get('turno');

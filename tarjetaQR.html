@@ -46,7 +46,7 @@
       <h4><b>Contabilidad</b></h4>
       <p><b id="fullName"></b></p>
       <p id="asign"></p>
-      <p id="turno"><b>Turno:</b></p>
+      <!-- <p id="turno"><b>Turno:</b></p> -->
     </div>
     <div id="color" class="w3-container w3-green w3-cell" style="width:100px;padding: 0.25rem 1.075rem 0.25rem 1.075rem;border-bottom-right-radius: 8px;">
     	<div class="w3-panel marginOk w3-border w3-round-large">
@@ -92,13 +92,13 @@
       }
       var fullName = urlParams.get('apellido') + ", " + urlParams.get('nombre');
       var asign = urlParams.get('asign');
-      var turno = urlParams.get('turno');
+      /*var turno = urlParams.get('turno');*/
       var pathImage = "./images/" + image + ".jpg";
       /*document.getElementById("imgPerfil").src = pathImage;*/
       document.getElementById("divCont").setAttribute("style","background-image: url(" + pathImage + ");");
       document.getElementById("fullName").innerHTML = fullName;
       document.getElementById("asign").innerHTML = "<b>Asignación:</b> " + asign;
-      document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;
+      /*document.getElementById("turno").innerHTML = "<b>Turno:</b> " + turno;*/
     }else{
       /* document.getElementById("imgPerfil").src = "./images/imgAvatar.png";*/arguments
       document.getElementById("divCont").setAttribute("style","background-image: url(./images/imgAvatar.jpg);");
@@ -106,7 +106,7 @@
       document.getElementById("fullName").setAttribute("class","w3-text-red");
       document.getElementById("fullName").setAttribute("style","margin: 0 2.2rem 0 0;");
       document.getElementById("asign").innerHTML = "";
-      document.getElementById("turno").innerHTML = "";
+      /*document.getElementById("turno").innerHTML = "";*/
       document.getElementById("check").innerHTML = "cancel";
       document.getElementById("color").setAttribute("class", "w3-container w3-cell w3-red");
     }
